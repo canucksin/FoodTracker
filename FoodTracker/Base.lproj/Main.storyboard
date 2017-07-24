@@ -27,22 +27,41 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="JDB-aa-X17">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="JDB-aa-X17">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="JDB-aa-X17" secondAttribute="height" multiplier="1:1" id="1Ir-rE-XiC"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RC-iv-Sxb">
-                                            <rect key="frame" x="98" y="8" width="269" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dMd-Pq-zeT" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                            <rect key="frame" x="98" y="37" width="252" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="M6P-2Q-N0F">
+                                            <rect key="frame" x="98" y="0.0" width="308" height="89.666666666666671"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RC-iv-Sxb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="41.666666666666657" height="45"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dMd-Pq-zeT" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="45.000000000000007" width="308" height="44.666666666666679"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </stackView>
+                                            </subviews>
                                         </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="M6P-2Q-N0F" firstAttribute="leading" secondItem="JDB-aa-X17" secondAttribute="trailing" constant="8" id="K2F-Gn-9xK"/>
+                                        <constraint firstItem="JDB-aa-X17" firstAttribute="leading" secondItem="xeK-o9-OZe" secondAttribute="leading" id="SYl-LV-15T"/>
+                                        <constraint firstItem="M6P-2Q-N0F" firstAttribute="top" secondItem="xeK-o9-OZe" secondAttribute="top" id="ZNH-5k-jro"/>
+                                        <constraint firstAttribute="bottom" secondItem="M6P-2Q-N0F" secondAttribute="bottom" id="fMm-nB-xfp"/>
+                                        <constraint firstAttribute="trailing" secondItem="M6P-2Q-N0F" secondAttribute="trailing" constant="8" id="fiz-cK-ZGF"/>
+                                        <constraint firstItem="JDB-aa-X17" firstAttribute="top" secondItem="xeK-o9-OZe" secondAttribute="top" id="qQb-6Z-qkK"/>
+                                        <constraint firstAttribute="bottom" secondItem="JDB-aa-X17" secondAttribute="bottom" id="vHe-LN-5aq"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="0RC-iv-Sxb" id="Gnr-2Z-Z5p"/>
@@ -83,7 +102,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Iyd-jT-RPQ">
-                                <rect key="frame" x="20" y="84" width="374" height="410"/>
+                                <rect key="frame" x="20" y="84" width="374" height="622"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="djc-Sv-4ce">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -102,7 +121,7 @@
                                         </connections>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ITE-xy-oDD" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="61" y="366" width="252" height="44"/>
+                                        <rect key="frame" x="0.0" y="366" width="374" height="256"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -198,6 +217,6 @@
         <image name="defaultPhoto" width="540" height="540"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4VR-XK-Aud"/>
+        <segue reference="AnW-F1-HQw"/>
     </inferredMetricsTieBreakers>
 </document>

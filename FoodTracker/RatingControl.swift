@@ -87,8 +87,10 @@ import UIKit
             
             // Add constraints
             button.translatesAutoresizingMaskIntoConstraints = false
-            button.heightAnchor.constraint(equalToConstant: starSize.height).isActive = true
-            button.widthAnchor.constraint(equalToConstant: starSize.width).isActive = true
+            //button.heightAnchor.constraint(equalToConstant: starSize.height).isActive = true
+            //button.widthAnchor.constraint(equalToConstant: starSize.width).isActive = true
+            
+            button.imageView?.contentMode = UIViewContentMode.scaleAspectFit
             
             // Set the accessibility label
             button.accessibilityLabel = "Set \(index + 1) star rating."
