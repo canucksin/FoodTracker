@@ -120,7 +120,7 @@
                                             <outletCollection property="gestureRecognizers" destination="t1T-u3-PPm" appends="YES" id="8BU-ZS-LFd"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ITE-xy-oDD" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ITE-xy-oDD" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="366" width="374" height="256"/>
                                     </stackView>
                                 </subviews>
