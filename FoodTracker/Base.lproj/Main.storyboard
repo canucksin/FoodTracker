@@ -34,16 +34,16 @@
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="M6P-2Q-N0F">
-                                            <rect key="frame" x="98" y="0.0" width="308" height="89.666666666666671"/>
+                                            <rect key="frame" x="98" y="0.0" width="308" height="81.666666666666671"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0RC-iv-Sxb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="41.666666666666657" height="45"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="41.666666666666657" height="41"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dMd-Pq-zeT" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="45.000000000000007" width="308" height="44.666666666666679"/>
+                                                    <rect key="frame" x="0.0" y="41" width="308" height="40.666666666666671"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                                             <integer key="value" value="5"/>
@@ -57,7 +57,7 @@
                                         <constraint firstItem="M6P-2Q-N0F" firstAttribute="leading" secondItem="JDB-aa-X17" secondAttribute="trailing" constant="8" id="K2F-Gn-9xK"/>
                                         <constraint firstItem="JDB-aa-X17" firstAttribute="leading" secondItem="xeK-o9-OZe" secondAttribute="leading" id="SYl-LV-15T"/>
                                         <constraint firstItem="M6P-2Q-N0F" firstAttribute="top" secondItem="xeK-o9-OZe" secondAttribute="top" id="ZNH-5k-jro"/>
-                                        <constraint firstAttribute="bottom" secondItem="M6P-2Q-N0F" secondAttribute="bottom" id="fMm-nB-xfp"/>
+                                        <constraint firstAttribute="bottom" secondItem="M6P-2Q-N0F" secondAttribute="bottom" constant="8" id="fMm-nB-xfp"/>
                                         <constraint firstAttribute="trailing" secondItem="M6P-2Q-N0F" secondAttribute="trailing" constant="8" id="fiz-cK-ZGF"/>
                                         <constraint firstItem="JDB-aa-X17" firstAttribute="top" secondItem="xeK-o9-OZe" secondAttribute="top" id="qQb-6Z-qkK"/>
                                         <constraint firstAttribute="bottom" secondItem="JDB-aa-X17" secondAttribute="bottom" id="vHe-LN-5aq"/>
@@ -102,7 +102,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Iyd-jT-RPQ">
-                                <rect key="frame" x="20" y="84" width="374" height="622"/>
+                                <rect key="frame" x="20" y="84" width="374" height="358"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="djc-Sv-4ce">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -120,19 +120,25 @@
                                             <outletCollection property="gestureRecognizers" destination="t1T-u3-PPm" appends="YES" id="8BU-ZS-LFd"/>
                                         </connections>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ITE-xy-oDD" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="366" width="374" height="256"/>
-                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="djc-Sv-4ce" secondAttribute="trailing" id="JI4-a1-Gtk"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ITE-xy-oDD" customClass="RatingControl" customModule="FoodTracker" customModuleProvider="target">
+                                <rect key="frame" x="20" y="450" width="374" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="c30-7v-PS6"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Iyd-jT-RPQ" secondAttribute="trailing" id="5al-tZ-3Lo"/>
+                            <constraint firstItem="ITE-xy-oDD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="PqC-up-g1G"/>
                             <constraint firstItem="Iyd-jT-RPQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TOM-Xk-qzq"/>
+                            <constraint firstItem="ITE-xy-oDD" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="V9d-8Z-ouH"/>
+                            <constraint firstItem="ITE-xy-oDD" firstAttribute="top" secondItem="Iyd-jT-RPQ" secondAttribute="bottom" constant="8" id="YmJ-pM-BL1"/>
                             <constraint firstItem="Iyd-jT-RPQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="cnh-Sz-z5d"/>
                         </constraints>
                     </view>
