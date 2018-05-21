@@ -44,11 +44,11 @@ import UIKit
     
     //MARK: Button Action
     
-    func ratingButtonTapped(button: UIButton) {
+    @objc func ratingButtonTapped(button: UIButton) {
         guard let index = ratingButtons.index(of: button) else {
             fatalError("The button, \(button), is not in the ratingButtons array: \(ratingButtons)")
         }
-        
+         
         // Caclulate the rating of the selected button
         let selectedRating = index + 1
         
@@ -87,9 +87,7 @@ import UIKit
             
             // Add constraints
             button.translatesAutoresizingMaskIntoConstraints = false
-            //button.heightAnchor.constraint(equalToConstant: starSize.height).isActive = true
-            //button.widthAnchor.constraint(equalToConstant: starSize.width).isActive = true
-            
+
             button.imageView?.contentMode = UIViewContentMode.scaleAspectFit
             
             // Set the accessibility label
